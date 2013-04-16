@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+###################################################################
+#    Program : Simple Linux Security Checker (SLSC)               #
+#    Author  : Hayden Wei <haidongrun@163.com>                    #
+#    Version : 1.0.0                                              #
+#    Date    : 2013-03-20                                         #
+#    Copyright (C) 2013-2013 Hayden Wei.  All Rights Reserved.    #
+###################################################################
+#
+#
+RESULT="" #存储每个检查项的结果
+OK="[OK]" #符合安全要求
+WARNING="[WARNING]" #存在安全因患
+SELF="[SELF]" #需要自己排查
+LOGFILE="./log" #日志文件路径

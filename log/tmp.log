@@ -1,0 +1,7 @@
+Check /etc/passwd!
+Check /etc/shadow!
+Check /etc/group!
+Check users without password!
+Check users with root permission except ROOT!
+Check PASS_MIN_LEN!Current password minimum length is 5, you'd better enlarge it!
+Check UMASK!Current umask value is 022, you'd better change it to 077!
