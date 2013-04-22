@@ -120,6 +120,33 @@ fi
 echo "" >> ${LOGFILE}/tmp.log
 output ${RESULT}
 
+#----------------------------------------------------------------------------------------------
+# Check ipv6
+#----------------------------------------------------------------------------------------------
+echo "Checking ipv6..."
+echo -n "Check ipv6!" >> ${LOGFILE}/tmp.log
+RESULT=${OK}
+if [ "`lsmod | grep ipv6`" != "" ]; then
+    echo -n "Detecting ipv6 is enabled, you'd better disable it!" >> ${LOGFILE}/tmp.log
+    RESULT=${WARNING}
+fi
+echo "" >> ${LOGFILE}/tmp.log
+output ${RESULT}
+
+#----------------------------------------------------------------------------------------------
+# Check no owner files
+#----------------------------------------------------------------------------------------------
+echo "Checking no owner files..."
+echo -n "Check no owner files!" >> ${LOGFILE}/tmp.log
+RESULT=${OK}
+resultCount=`find /home -xdev \( -nouser -o -nogroup \) -print | grep -c "/"`
+if [ resultCount != 0 ]; then
+    echo -n "Detecting there are no owner files, you'd better investidate them!" >> ${LOGFILE}/tmp.log
+    RESULT=${WARNING}
+fi
+echo "" >> ${LOGFILE}/tmp.log
+output ${RESULT}
+
 
 #----------------------------------------------------------------------------------------------
 # Create .html log file

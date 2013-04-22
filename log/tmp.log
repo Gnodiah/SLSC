@@ -4,4 +4,6 @@ Check /etc/group!
 Check users without password!
 Check users with root permission except ROOT!
 Check PASS_MIN_LEN!Current password minimum length is 5, you'd better enlarge it!
-Check UMASK!Current umask value is 022, you'd better change it to 077!
+Check UMASK!Current umask value is , you'd better change it to 077!
+Check ipv6!Detecting ipv6 is enabled, you'd better disable it!
+Check no owner files!Detecting there are no owner files, you'd better investidate them!
